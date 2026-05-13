@@ -3,7 +3,7 @@
         "openvscode.Application": {
             "title": "openvscode",
             "icon": "images/icon_{0}.png",
-            "type": "url",
+            "type": "iframe",
             "protocol": "",
             "gatewaySocket": "app.sock",
             "gatewayPrefix": "/app/openvscode",

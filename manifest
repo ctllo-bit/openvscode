@@ -1,7 +1,7 @@
 appname               = openvscode
 version               = 1.0.0
-display_name          = openvscode-server
-desc                  = app-description
+display_name          = openvscode
+desc                  = openvscode-server
 arch                  = x86_64
 source                = thirdparty
 maintainer            = your-name
