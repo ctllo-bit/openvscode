@@ -1,0 +1,28 @@
+{
+    "data-share":
+    {
+        "shares":
+        [
+            {
+                "name": "openvscode",
+                "permission":
+                {
+                    "rw":
+                    [
+                        "openvscode"
+                    ]
+                }
+            },
+            {
+                "name": "openvscode/data",
+                "permission":
+                {
+                    "rw":
+                    [
+                        "openvscode"
+                    ]
+                }
+            }
+        ]
+    }
+}
