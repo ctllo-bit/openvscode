@@ -3,8 +3,13 @@
 LOG_FILE="${TRIM_PKGVAR}/info.log"
 PID_FILE="${TRIM_PKGVAR}/app.pid"
 
+export PATH=/var/apps/openvscode/target/openvscode-server/bin:$PATH
+export HOME=/var/apps/openvscode/home
+
+SOCK="${TRIM_APPDEST}/app.sock"
+
 # write the command to start your program here 
-CMD=""
+CMD="/var/apps/openvscode/target/openvscode-server/bin/openvscode-server --socket-path "$SOCK" --server-base-path /app/openvscode --without-connection-token --accept-server-license-terms"
 
 log_msg() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> ${LOG_FILE}

@@ -4,10 +4,11 @@
             "title": "openvscode",
             "icon": "images/icon_{0}.png",
             "type": "url",
-            "protocol": "http",
-            "port": "{port}",
-            "url": "/{url-path}",
-            "allUsers": false
+            "protocol": "",
+            "gatewaySocket": "app.sock",
+            "gatewayPrefix": "/app/openvscode",
+            "url": "/app/openvscode",
+            "allUsers": true
         }
     }
 }
