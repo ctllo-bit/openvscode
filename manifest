@@ -1,10 +1,15 @@
 appname               = openvscode
 version               = 1.0.0
-display_name          = openvscode
-desc                  = openvscode-server
-arch                  = x86_64
+display_name          = "Open Vscode"
+desc                  = `<div>VS Code 传统上是一款基于 Web 技术构建的桌面 IDE。几年前，人们开始对其进行修改，使其能够在远程环境下运行并通过 Web 浏览器访问。由于需要对 VS Code 庞大的代码库进行大量更改，这些工作既复杂又容易出错。<span>
+
+幸运的是，VS Code 团队在 2019 年开始重构其架构，以支持基于浏览器的工作模式。虽然 Gitpod 和 GitHub 都采用了这种架构，但其中的关键部分直到现在才开源。因此，社区中许多人仍然在使用旧的、难以维护且容易出错的方法。在 Gitpod，我们经常被问到我们是如何做到的。所以我们决定分享一下所需的最小更改，以便大家能够使用最新版本的 VS Code，拥有简单的升级路径和较低的维护成本。
+</span></div>`
+
+arch                  = all
 source                = thirdparty
-maintainer            = your-name
-distributor           = your-name
+maintainer            = gitpod
+maintainer_url        = https://github.com/gitpod-io/openvscode-server
+distributor           = ctllo-bit
 desktop_uidir         = ui
 desktop_applaunchname = openvscode.Application

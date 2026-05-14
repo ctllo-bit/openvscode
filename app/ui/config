@@ -1,14 +1,27 @@
 {
     ".url": {
-        "openvscode.Application": {
-            "title": "openvscode",
+        "openvscode.main": {
+            "title": "Open VSCode桌面版",
             "icon": "images/icon_{0}.png",
             "type": "iframe",
             "protocol": "",
-            "gatewaySocket": "app.sock",
+            "gatewaySocket": "openvscode.sock",
             "gatewayPrefix": "/app/openvscode",
             "url": "/app/openvscode",
             "allUsers": true
+        },
+        "openvscode.Application": {
+            "title": "Open VSCode外链版",
+            "icon": "images/code_icon_{0}.png",
+            "type": "url",
+            "protocol": "",
+            "gatewaySocket": "openvscode.sock",
+            "gatewayPrefix": "/app/openvscode",
+            "url": "/app/openvscode",
+            "allUsers": false
         }
     }
 }
+
+
+            

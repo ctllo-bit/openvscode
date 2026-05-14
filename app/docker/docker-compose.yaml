@@ -1,0 +1,16 @@
+version: "3.8"
+
+      # - "/var/apps/openvscode/shares/data/.config:/home/coder/.config"  # 配置文件路径
+services:
+  code-server:
+    image: gitpod/openvscode-server:latest
+    container_name: openvscode-server
+    restart: unless-stopped
+    init: true
+    volumes:
+      - "/var/apps/openvscode/target:/run/openvscode"
+      - "/vol1/1000/VscodeProject:/home/workspace/project"
+    user: "1000:1000"
+    environment:
+      - TZ=Asia/Shanghai
+    command: --socket-path /run/openvscode/openvscode.sock --server-base-path /app/openvscode 
