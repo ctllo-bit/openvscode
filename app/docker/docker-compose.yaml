@@ -2,17 +2,20 @@ version: "3.8"
 
 services:
   openvscode-server:
-    image: gitpod/openvscode-server:latest
+    image: lscr.io/linuxserver/openvscode-server:latest
     container_name: openvscode-server
     restart: unless-stopped
-    init: true
+    entrypoint:
+      - /app/openvscode-server/bin/openvscode-server
+    environment:
+      - PUID=1000
+      - PGID=1001
+      - TZ=Asia/Shanghai
+      - HOME=/home/workspace
     volumes:
       - "/var/apps/openvscode/target:/var/apps/openvscode/target:rw" # 将宿主映射进容器
       - "/var/apps/openvscode/shares/data/extensions:/var/apps/openvscode/shares/data/extensions:rw" # 插件持久化
       - "/var/apps/openvscode/shares/data/userdata:/var/apps/openvscode/shares/data/userdata:rw" # 用户配置
       - "/vol1/1000/VscodeProject:/home/workspace/project" # 项目目录
-    user: "1000:1000"
-    environment:
-      - TZ=Asia/Shanghai
-    command: --socket-path /var/apps/openvscode/target/openvscode.sock --server-base-path /app/openvscode  --extensions-dir /var/apps/openvscode/shares/data/extensions --user-data-dir /var/apps/openvscode/shares/data/userdata
-             
+    command: --socket-path /var/apps/openvscode/target/openvscode.sock --server-base-path /app/openvscode --extensions-dir /var/apps/openvscode/shares/data/extensions --user-data-dir /var/apps/openvscode/shares/data/userdata --without-connection-token
+    
